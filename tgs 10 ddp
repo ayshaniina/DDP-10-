@@ -1,0 +1,66 @@
+#tugas 10 ddp peretemuan 9 (29 nov 2023) PPT 19-20
+
+#fungsi Nama siswa yg lulus
+hasil_akhir = [
+    {'nama':'Reza', 'nilai':70},
+    {'nama':'Ciut', 'nilai':63},
+    {'nama':'Dian', 'nilai':80},
+    {'nama':'Badu', 'nilai':40}
+]
+
+def predikatlulus(data):
+  #menggunakan list utk ambil nama dari hasil_akhir
+  #yg memiliki ilai lebih dari 65
+  lulus = [mahasiswa['nama']
+     for mahasiswa in data
+     if mahasiswa['nilai']> 65]
+  return lulus
+
+  #manggil fungsi lulus utk berikan predikat lulus
+  #pada nama yg miliki nilai lebih dari 65
+hasil = predikatlulus(hasil_akhir)
+print('siswa yang lulus :',hasil) 
+
+#soal1 membalik
+buahbuah = ['pepaya','mangga','pisang','durian','jambu']
+def list_buah(buah):
+  list_terbalik = []
+
+  for i in range(len(buah) -1,-1,-1):
+    list_terbalik.append(buah[i])
+   #nambahin elemen ke list
+
+  return list_terbalik
+
+hasilnya = list_buah(buahbuah)
+print('urutan sudah dibalik jadi',hasilnya)
+
+#soal 2 duplikasi
+parabuah = ['pepaya','mangga','pisang','durian','jambu']
+
+def duplikat(buah):
+    duplikat_buah = []
+    for buah in parabuah:
+     duplikat_buah.append(buah)
+     duplikat_buah.append(buah)
+
+    return duplikat_buah
+
+hasilnya = duplikat(parabuah)
+print('hasil duplikat para buah adalah',hasilnya)
+
+#soal 3 hanya konsonan
+
+kalimat = 'Nurul Fikri'
+
+def konsonan(kalimat):
+   huruf = ''
+
+   for i in kalimat:
+     if i not in 'aiueo':
+        #konsonan ke string kosong
+        huruf += i
+   return huruf
+
+hasilnya = konsonan(kalimat)
+print('huruf konsonan dari kata Nurul Fikri yaitu',hasilnya)
